@@ -1,1 +1,43 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Gotham";
+        src:    local("Gotham"),
+                url("/fonts/Gotham-Bold.woff2") format("woff2");
+    }
+
+    @font-face {
+        font-family: "Proxima Nova";
+        src:    local("Proxima Nova"),
+                url("/fonts/ProximaNova-Regular.woff2") format("woff2");
+    }
+}
+
+
+
+html,
+body {
+    @apply relative w-full h-full;
+}
+body {
+    @apply text-white m-0 box-border;
+    font-family: "Proxima Nova", sans-serif;
+    background: rgb(29, 32, 37);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Gotham", sans-serif;
+    @apply tracking-tight;
+}
+p {
+    font-family: "Proxima Nova", sans-serif;
+    color: rgb(103, 116, 124);
+}
