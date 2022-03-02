@@ -1,4 +1,4 @@
 export interface BlockForm {
-    title: string;
+    header: string;
     body: string;
 }

@@ -1,8 +1,9 @@
 <script lang="ts">
     export let isRounded = false;
+    export let title = "a button";
 </script>
 
-<button tabindex="0" class:round={isRounded} on:click>
+<button tabindex="0" class:round={isRounded} {title} on:click>
     <slot />
 </button>
 
